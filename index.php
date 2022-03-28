@@ -1,7 +1,7 @@
 <?php
 
 include "config/config.php";
-#test
+#test21asa
 $request = new Request();
 
 if (substr($request->getPath(),0,3) === "api") {
