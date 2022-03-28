@@ -5,9 +5,16 @@
 #ChatBotDiv{
   background: red;
   display: none;
+
 }
-
-
+#ChatbotPosition{
+  position:sticky;
+  bottom:0;
+  float: right;
+}
+#RegistrationForm{
+  background: blue;
+}
 
 
 .App-header {

@@ -19,14 +19,14 @@ class CreateChatbot extends React.Component {
 
     render(){
         return(
-            <footer>
+            <div id="ChatbotPosition">
                 <img id="ChatbotImg" src={chatbot} className="chatbot" alt="Chatbot Logo" onClick={this.handleClick} />
                 <div id="ChatBotDiv" onClick={this.handleClick}>
                     CHATBOT GO HERE
                 </div>
+            </div>
 
 
-            </footer>
 
         )
     }

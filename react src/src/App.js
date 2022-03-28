@@ -2,9 +2,10 @@ import HomePage from "./components/homepage";
 import ErrorPage from "./components/errorpage";
 import LoginPage from './components/loginPage.js';
 import './App.css';
-import Registration from './components/registration.js';
+import Registerpage from './components/registerpage.js';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import CreateChatbot from "./components/chatbot";
+
 
 function App() {
   return (
@@ -15,18 +16,16 @@ function App() {
          <nav>
            <ul>
              <li><Link to="/">Home</Link></li>
-             <li><Link to="register">register</Link></li>
-               <LoginPage/>
+             <li><Link to="register">Register</Link></li>
+             <LoginPage/>
            </ul>
          </nav>
        </div>
       </header>
-
-
         <body>
         <Routes>
             <Route path="/" element={<HomePage/>} />
-            <Route path="register" element={<Registration/>}/>
+            <Route path="register" element={<Registerpage/>}/>
             <Route path="*" element={<ErrorPage />} />
         </Routes>
         </body>
