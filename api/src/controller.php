@@ -3,7 +3,7 @@
 abstract class Controller {
 
     private $request;
-    protected $reponse;
+    private $reponse;
     protected $gateway;
 
     public function __construct($request, $response) {
@@ -27,7 +27,7 @@ abstract class Controller {
         $this->response = $response;
     }
 
-    protected function getResponse() {
+    public function getResponse() {
         return $this->response;
     }
 

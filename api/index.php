@@ -1,7 +1,7 @@
 <?php
 
 include "config/config.php";
-#test2
+
 $request = new Request();
 
 if (substr($request->getPath(),0,3) === "api") {
@@ -13,23 +13,14 @@ if (substr($request->getPath(),0,3) === "api") {
 
 switch ($request->getPath()) {
     case '':
-        echo "hello";
-        break;
-
-    case 'home':
-        echo "hello home";
-        break;
-
-    case 'test': 
-        echo 'work?';
-        break;
-
     case 'api':
         $controller = new ApiBaseController($request, $response);
         break;
-
-    case 'api/authenticate':
-        $controller = new ApiAuthenticateController($request, $response);
+ case 'api/authenticate':
+            $controller = new ApiAuthenticateController($request, $response);
+        break;
+    case 'api/register':
+            $controller = new ApiRegisterController($request, $response);
         break;
     default:
         

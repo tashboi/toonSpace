@@ -1,18 +1,18 @@
 <?php
 
-include 'config/autoloader.php';
-spl_autoload_register("autoloader");
-
-define('BASEPATH', '/Y3/toonSpace');
-define('USER_DATABASE', 'db/user.sqlite');
+define('BASEPATH', '/26test/new/');
+define('USER_DATABASE', 'db/user.sqlite');  
 define('DEVELOPMENT_MODE', true);
+define('SECRET_KEY', '4O235jPqhv');
 
 ini_set('display_errors', DEVELOPMENT_MODE);
 ini_set('display_startup_errors', DEVELOPMENT_MODE);
   
+include 'config/autoloader.php';
+spl_autoload_register("autoloader");
 
 include 'config/htmlexceptionhandler.php';
-include 'config/jsonexception.php';
+include 'config/jsonexceptionhandler.php';
 set_exception_handler("JSONexceptionHandler");
 
 include 'config/errorhandler.php';
