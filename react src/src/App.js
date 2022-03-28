@@ -8,29 +8,32 @@ import CreateChatbot from "./components/chatbot";
 
 function App() {
   return (
+<BrowserRouter>
     <div className="App">
       <header className="App-header">
-       <BrowserRouter >
        <div>
          <nav>
            <ul>
              <li><Link to="/">Home</Link></li>
-             <li><Link to="login">login</Link></li>
              <li><Link to="register">register</Link></li>
+               <LoginPage/>
            </ul>
          </nav>
-
-         <Routes>
-           <Route path="/" element={<HomePage/>} />
-           <Route path="login" element={<LoginPage/>}/>
-           <Route path="register" element={<Registration/>}/>
-           <Route path="*" element={<ErrorPage />} />
-         </Routes>
        </div>
-       </BrowserRouter>
       </header>
+
+
+        <body>
+        <Routes>
+            <Route path="/" element={<HomePage/>} />
+            <Route path="register" element={<Registration/>}/>
+            <Route path="*" element={<ErrorPage />} />
+        </Routes>
+        </body>
         <CreateChatbot/>
+
     </div>
+</BrowserRouter>
   );
 }
 
