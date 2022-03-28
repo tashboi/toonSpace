@@ -1,8 +1,10 @@
 import HomePage from "./components/homepage";
 import ErrorPage from "./components/errorpage";
 import LoginPage from './components/loginPage.js';
+import './App.css';
 import Registration from './components/registration.js';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import CreateChatbot from "./components/chatbot";
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
        </div>
        </BrowserRouter>
       </header>
+        <CreateChatbot/>
     </div>
   );
 }
