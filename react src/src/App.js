@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+import HomePage from "./components/homepage";
+import ErrorPage from "./components/errorpage";
 import LoginPage from './components/loginPage.js';
 import Registration from './components/registration.js';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
@@ -11,13 +12,17 @@ function App() {
        <div>
          <nav>
            <ul>
+             <li><Link to="/">Home</Link></li>
              <li><Link to="login">login</Link></li>
              <li><Link to="register">register</Link></li>
            </ul>
          </nav>
+
          <Routes>
+           <Route path="/" element={<HomePage/>} />
            <Route path="login" element={<LoginPage/>}/>
            <Route path="register" element={<Registration/>}/>
+           <Route path="*" element={<ErrorPage />} />
          </Routes>
        </div>
        </BrowserRouter>
