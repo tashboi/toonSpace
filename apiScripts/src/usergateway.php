@@ -12,4 +12,11 @@ class UserGateway extends Gateway  {
     $result = $this->getDatabase()->executeSQL($sql, $params);
     $this->setResult($result);
 }
+    public function getID($email)
+    {
+        $sql = " Select id from user where email = :email";
+        $params = [":email" => $email];
+        $result = $this->getDatabase()->executeSQL($sql, $params);
+        return $result;
+    }
 }

@@ -22,6 +22,12 @@ switch ($request->getPath()) {
     case 'api/register':
             $controller = new ApiRegisterController($request, $response);
         break;
+    case 'api/thread';
+            $controller = new ApiThreadListController($request, $response);
+        break;
+    case 'api/comment';
+            $controller = new ApiCommentController($request, $response);
+        break;
     default:
         
         break;

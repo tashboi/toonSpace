@@ -9,7 +9,7 @@ class ApiAuthenticateController extends Controller {
     
     protected function processRequest() {
         $data = [];
-
+        $id = "";
         $email = $this->getRequest()->getParameter("email");
         $password = $this->getRequest()->getParameter("password");
 
@@ -29,11 +29,12 @@ class ApiAuthenticateController extends Controller {
                             "user_id" => 1,
                             "exp" => time() + 7776000
                         );
-                    
+                        
                         // Use the JWT class to encode the token
                         $jwt = JWT::encode($payload, $key, 'HS256');
-                    
-                        $data = ['token' => $jwt];
+                        $idbase = $this->getGateway()->getID($email);
+                        $id = $idbase['0'];
+                        $data = ['token' => $jwt, 'id' => $id];
                      
                     }
                 }
