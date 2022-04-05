@@ -12,19 +12,30 @@ if (substr($request->getPath(),0,3) === "api") {
 }
 
 switch ($request->getPath()) {
-    case '':
-    case 'api':
-        $controller = new ApiBaseController($request, $response);
+        case '':
+            
         break;
- case 'api/authenticate':
+        case 'api':
+            $controller = new ApiBaseController($request, $response);
+            break;
+        case 'api/events':
+            $controller = new ApiEventsController($request, $response);
+            break;
+        case 'api/authenticate':
             $controller = new ApiAuthenticateController($request, $response);
-        break;
-    case 'api/register':
+            break;
+        case 'api/register':
             $controller = new ApiRegisterController($request, $response);
-        break;
-    default:
+            break;
+            
+            
         
-        break;
+    default:
+        if (substr($request->getPath(),0,3) === "api"){
+            $controller = new ApiErrorController($request, $response);
+        }else{
+            $controller = new ErrorController($request, $response);
+        }
 }
  
 echo $response->getData();
