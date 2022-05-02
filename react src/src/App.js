@@ -4,7 +4,7 @@ import LoginPage from './components/loginPage.js';
 import './App.css';
 import Registerpage from './components/registerpage.js';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import CreateChatbot from "./components/chatbot";
+import CreateChatbot from "./components/Tom/chatbotDisplay";
 
 
 function App() {
