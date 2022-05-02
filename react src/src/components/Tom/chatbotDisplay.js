@@ -9,6 +9,7 @@ import chatbotIMG from "../../img/chatbot.png"
 
 class chatbotDisplay extends React.Component {
 
+
     handleClick = () => {
         var div = document.getElementById("ChatBotDiv");
         var img =document.getElementById("ChatbotImg");
@@ -24,6 +25,7 @@ class chatbotDisplay extends React.Component {
     }
 
     render(){
+       // const [show,setShow]=React.useState(true)
         return(
             <div id="ChatbotPosition">
                 <img id="ChatbotImg" src={chatbotIMG} className="chatbot" alt="Chatbot Logo" onClick={this.handleClick} />
