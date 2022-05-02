@@ -1,13 +1,75 @@
 import React from "react";
-import { createChatBotMessage } from "react-chatbot-kit";
+import {
+    createChatBotMessage,
+    createCustomMessage,
+} from 'react-chatbot-kit';
 
 import HelpOptions from "./components/HelpOptions/HelpOptions";
 import LinkList from "./components/LinkList/LinkList";
+
+import Booking121 from './components/CustomMessages/Booking121.js';
+
+import CustomMessage from './components/CustomMessages/CustomMessage.js';
+
+const botName = 'DocsBot';
+
+const config = {
+    botName: botName,
+    lang: 'no',
+    customStyles: {
+        botMessageBox: {
+            backgroundColor: '#376B7E',
+        },
+        chatButton: {
+            backgroundColor: '#5ccc9d',
+        },
+    },
+    initialMessages: [
+        createChatBotMessage(
+            `Hi I'm ${botName}. I’m here to help you explain how I work.`
+        ),
+        createChatBotMessage(
+            "Here's a quick overview over what I need to function. ask me about the different parts to dive deeper.",
+            {
+                withAvatar: false,
+                delay: 500,
+            }
+        ),
+        createCustomMessage('test', 'custom'),
+    ],
+    state: {
+        gist: '',
+        infoBox: '',
+    },
+    customComponents: {},
+    customMessages: {
+        custom: (props) => <CustomMessage {...props} />,
+    },
+    widgets: [],
+};
+
+export default config;
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+*
+
 const BotName = 'Study Abroad Virtual Helper';
 const config = {
 
     initialMessages: [
-        createChatBotMessage(`Hi, I'm ${BotName}! Here are some topics i can help with`, {
+        createChatBotMessage(`Hi, I'm ${BotName}! Below are some of the topics i can help with. Either click the option or type your query below to get started. I will do  my best to help! :)`, {
             widget: "HelpOptions",
         }),
     ],
@@ -39,6 +101,20 @@ const config = {
                         url: "https://www.google.co.uk",
                         id: 3,
                     },
+                ],
+            },
+        },
+        {
+            widgetName: "Booking121Links",
+            widgetFunc: (props) => <LinkList {...props} />,
+            props: {
+                options: [
+                    {
+                        text: "Booking 1 to 1 students link 1",
+                        url:
+                            "https://www.google.co.uk",
+                        id: 1,
+                    }
                 ],
             },
         },
@@ -121,3 +197,7 @@ const config = {
 };
 
 export default config;
+*
+*
+*
+*  */

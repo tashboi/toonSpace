@@ -4,13 +4,6 @@ class ActionProvider {
         this.setState = setStateFunc;
     }
 
-//createChatBotMessage(
-//       `Hi I'm ${botName}. I’m here to help you explain how I work.`
-//     ),
-//     createChatBotMessage(
-//       "Here's a quick overview over what I need to function. ask me about the different parts to dive deeper.",
-//
-//     )
 
     handleFollowUp = () => {
         const message = this.createChatBotMessage(
@@ -66,6 +59,22 @@ class ActionProvider {
         this.handleFollowUp()
 
     };
+    handle121booking = () => {
+        const message = this.createChatBotMessage(
+            "So to book a 1 2 1. Please supply your Email",
+            {
+                widget: "Booking121Links",
+            }
+        );
+        this.updateChatbotState(message);
+
+    };
+
+
+
+
+
+
 
     updateChatbotState(message) {
         // NOTICE: This function is set in the constructor, and is passed in from the top level Chatbot component. The setState function here actually manipulates the top level state of the Chatbot, so it's important that we make sure that we preserve the previous state.

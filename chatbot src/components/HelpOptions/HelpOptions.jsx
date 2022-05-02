@@ -22,9 +22,13 @@ const HelpOptions = (props) => {
             handler: props.actionProvider.handleFinancialList,
             id: 4 },
         {
+            text: "Book a 1 to 1 meeting!",
+            handler: props.actionProvider.handle121booking,
+            id: 5},
+        {
             text: "Other",
             handler: () => {},
-            id: 5 },
+            id: 6 },
     ];
 
     const optionsMarkup = options.map((option) => (
