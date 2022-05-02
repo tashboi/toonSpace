@@ -1,3 +1,4 @@
+
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc) {
         this.createChatBotMessage = createChatBotMessage;
@@ -61,9 +62,9 @@ class ActionProvider {
     };
     handle121booking = () => {
         const message = this.createChatBotMessage(
-            "So to book a 1 2 1. Please supply your Email",
+            "So to book a 1 2 1. Please fill the form below",
             {
-                widget: "Booking121Links",
+                widget: "Booking121Form",
             }
         );
         this.updateChatbotState(message);

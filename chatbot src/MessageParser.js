@@ -21,6 +21,9 @@ class MessageParser {
         if (lowerCaseMessage.includes("financ")) {
             this.actionProvider.handleFinancialList();
         }
+        if (lowerCaseMessage.includes("book") && (lowerCaseMessage.includes("one") || lowerCaseMessage.includes("1") )){
+            this.actionProvider.handle121booking()
+        }
 
     }
 }

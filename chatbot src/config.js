@@ -9,61 +9,6 @@ import LinkList from "./components/LinkList/LinkList";
 
 import Booking121 from './components/CustomMessages/Booking121.js';
 
-import CustomMessage from './components/CustomMessages/CustomMessage.js';
-
-const botName = 'DocsBot';
-
-const config = {
-    botName: botName,
-    lang: 'no',
-    customStyles: {
-        botMessageBox: {
-            backgroundColor: '#376B7E',
-        },
-        chatButton: {
-            backgroundColor: '#5ccc9d',
-        },
-    },
-    initialMessages: [
-        createChatBotMessage(
-            `Hi I'm ${botName}. I’m here to help you explain how I work.`
-        ),
-        createChatBotMessage(
-            "Here's a quick overview over what I need to function. ask me about the different parts to dive deeper.",
-            {
-                withAvatar: false,
-                delay: 500,
-            }
-        ),
-        createCustomMessage('test', 'custom'),
-    ],
-    state: {
-        gist: '',
-        infoBox: '',
-    },
-    customComponents: {},
-    customMessages: {
-        custom: (props) => <CustomMessage {...props} />,
-    },
-    widgets: [],
-};
-
-export default config;
-
-
-
-
-
-
-
-
-
-
-
-/*
-*
-*
-*
 
 const BotName = 'Study Abroad Virtual Helper';
 const config = {
@@ -105,18 +50,9 @@ const config = {
             },
         },
         {
-            widgetName: "Booking121Links",
-            widgetFunc: (props) => <LinkList {...props} />,
-            props: {
-                options: [
-                    {
-                        text: "Booking 1 to 1 students link 1",
-                        url:
-                            "https://www.google.co.uk",
-                        id: 1,
-                    }
-                ],
-            },
+            widgetName: "Booking121Form",
+            widgetFunc: (props) => <Booking121 {...props} />,
+
         },
         {
             widgetName: "OutgoingLinks",
@@ -193,10 +129,68 @@ const config = {
                 ],
             },
         },
-    ],
+    ],customMessages: {
+       // custom: (props) => <CustomMessage {...props} />,
+
+    }
 };
 
 export default config;
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+*
+
+const config = {
+    botName: botName,
+    lang: 'no',
+    customStyles: {
+        botMessageBox: {
+            backgroundColor: '#376B7E',
+        },
+        chatButton: {
+            backgroundColor: '#5ccc9d',
+        },
+    },
+    initialMessages: [
+        createChatBotMessage(
+            `Hi I'm ${botName}. I’m here to help you explain how I work.`
+        ),
+        createChatBotMessage(
+            "Here's a quick overview over what I need to function. ask me about the different parts to dive deeper.",
+            {
+                withAvatar: false,
+                delay: 500,
+            }
+        ),
+        createCustomMessage('test', 'custom'),
+    ],
+    state: {
+        gist: '',
+        infoBox: '',
+    },
+    customComponents: {},
+    customMessages: {
+        custom: (props) => <CustomMessage {...props} />,
+        Booking: (props) => <Booking121 {...props} />
+    },
+    widgets: [],
+};
+
+export default config;
+
+
 *
 *
 *
