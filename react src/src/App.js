@@ -6,8 +6,15 @@ import Registerpage from './components/registerpage.js';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ChatBotDisplay from "./components/Tom/chatbotDisplay";
 
+import React, { useState } from 'react';
+import Chatbot from "react-chatbot-kit";
+import config from "./components/Tom/config";
+import MessageParser from "./components/Tom/MessageParser";
+import ActionProvider from "./components/Tom/ActionProvider";
+
 
 function App() {
+    const [show,setShow]=useState(false)
   return (
 <BrowserRouter>
     <div className="App">
@@ -29,7 +36,14 @@ function App() {
             <Route path="*" element={<ErrorPage />} />
         </Routes>
         </body>
-        <ChatBotDisplay/>
+        <div id="ChatbotPosition">
+        {
+            show?
+                <Chatbot config={config} messageParser={MessageParser} actionProvider={ActionProvider} />
+                :null
+        }
+        <button onClick={()=>setShow(!show)}>Toggle</button>
+        </div>
 
     </div>
 </BrowserRouter>

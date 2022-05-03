@@ -6,7 +6,6 @@ import {
 
 import HelpOptions from "./HelpOptions/HelpOptions";
 import LinkList from "./LinkList/LinkList";
-
 import Booking121 from './CustomMessages/Booking121.js';
 
 
@@ -152,7 +151,6 @@ export default config;
 *
 *
 
-    },
     customComponents: {},
     customMessages: {
         custom: (props) => <CustomMessage {...props} />,
