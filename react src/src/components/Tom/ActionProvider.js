@@ -1,8 +1,18 @@
 
 class ActionProvider {
-    constructor(createChatBotMessage, setStateFunc) {
+    constructor(
+        createChatBotMessage,
+        setStateFunc,
+        createClientMessage,
+        stateRef,
+        createCustomMessage,
+        ...rest
+    ) {
         this.createChatBotMessage = createChatBotMessage;
         this.setState = setStateFunc;
+        this.createClientMessage = createClientMessage;
+        this.stateRef = stateRef;
+        this.createCustomMessage = createCustomMessage;
     }
 
 
@@ -70,6 +80,30 @@ class ActionProvider {
         this.updateChatbotState(message);
 
     };
+    handleRandomEvent = () => {
+        const message = this.createCustomMessage("A random Event","RandomEvent", { delay: 1000})
+        const message2 = this.createChatBotMessage(
+            "Here is a random event. You can click it to see more details about the event"
+        );
+        this.updateChatbotState(message2);
+        this.updateChatbotState(message);
+    };
+
+
+    handleUnrecognizedMessage = () =>{
+        const message = this.createChatBotMessage(
+            "Sorry, I do not understand your message, Please can you rewrite it?"
+        );
+        this.updateChatbotState(message);
+
+    }
+
+    handleGreetings = () => {
+        const message = this.createChatBotMessage(
+            "Hello!"
+        );
+        this.updateChatbotState(message);
+    }
 
 
 

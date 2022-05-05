@@ -7,6 +7,7 @@ import {
 import HelpOptions from "./HelpOptions/HelpOptions";
 import LinkList from "./LinkList/LinkList";
 import Booking121 from './CustomMessages/Booking121.js';
+import RandomEvent from "./CustomMessages/Events/RandomEvent";
 
 
 const BotName = 'Study Abroad Virtual Helper';
@@ -129,7 +130,7 @@ const config = {
             },
         },
     ],customMessages: {
-       // custom: (props) => <CustomMessage {...props} />,
+        RandomEvent: (props) => <RandomEvent {...props} />,
 
     }
 };
