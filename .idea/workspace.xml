@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdd1e2c7-abd9-49bc-a5d4-b05dd7bc2eb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/ApiEventsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/apierrorcontroller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/eventsgateway.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="cdd1e2c7-abd9-49bc-a5d4-b05dd7bc2eb5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,13 +21,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/api/src" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Pc User/Desktop/react/groupproject",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Pc User\Documents\GitHub\toonSpace\api\src" />
@@ -53,6 +48,8 @@
       <workItem from="1649102590814" duration="181000" />
       <workItem from="1649102777033" duration="2042000" />
       <workItem from="1649169235740" duration="1303000" />
+      <workItem from="1651936337364" duration="7000" />
+      <workItem from="1651936362575" duration="155000" />
     </task>
     <servers />
   </component>

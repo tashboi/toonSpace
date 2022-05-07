@@ -16,6 +16,10 @@ class ActionProvider {
     }
 
 
+
+
+
+
     handleFollowUp = () => {
         const message = this.createChatBotMessage(
             "Does this information help you in anyway?",
@@ -24,6 +28,7 @@ class ActionProvider {
             }
         );
         this.updateChatbotState(message);
+
     };
 
     handleIncomingList = () => {
@@ -80,10 +85,27 @@ class ActionProvider {
         this.updateChatbotState(message);
 
     };
+
+    handleEnquiryForm = () => {
+        const message = this.createChatBotMessage("Below is the Enquiry Form");
+        const message2 = this.createCustomMessage("Enquiry Form","EnquiryForm")
+
+        this.updateChatbotState(message);
+        this.updateChatbotState(message2);
+    };
+
     handleRandomEvent = () => {
-        const message = this.createCustomMessage("A random Event","RandomEvent", { delay: 1000})
+        const message = this.createCustomMessage("A random Event","RandomEvent")
         const message2 = this.createChatBotMessage(
             "Here is a random event. You can click it to see more details about the event"
+        );
+        this.updateChatbotState(message2);
+        this.updateChatbotState(message);
+    };
+    handleShowAllEvents = () => {
+        const message = this.createCustomMessage("List of events","AllEvents")
+        const message2 = this.createChatBotMessage(
+            "Here is a list of all the events. You can click an event to see more about the event!"
         );
         this.updateChatbotState(message2);
         this.updateChatbotState(message);
@@ -99,8 +121,10 @@ class ActionProvider {
     }
 
     handleGreetings = () => {
+        const greetings = ["hi", "hello", "hey"];
+        const randomGreeting = Math.floor(Math.random() * greetings.length);
         const message = this.createChatBotMessage(
-            "Hello!"
+            greetings[randomGreeting]
         );
         this.updateChatbotState(message);
     }

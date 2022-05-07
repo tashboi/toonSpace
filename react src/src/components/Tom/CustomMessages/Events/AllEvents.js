@@ -1,13 +1,14 @@
 import React from 'react';
 import Events from "./events";
 
-const RandomEvent = () => {
+const AllEvents = () => {
     return (
         <div className = "react-chatbot-kit-chat-bot-message">
-        <Events randomEvent={true}  />
+            <Events />
         </div>
+
 
     );
 };
 
-export default RandomEvent;
+export default AllEvents;

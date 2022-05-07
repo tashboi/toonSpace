@@ -15,16 +15,20 @@ class Event extends React.Component {
 
         if (this.state.display) {
             details =
-                <div>
-                    <p>{this.props.event.title}</p>
-                    <p>{this.props.event.category}</p>
-                </div>
+                <table>
+                        <tr>Description: {this.props.event.description}</tr>
+                        <tr>Category: {this.props.event.category}</tr>
+                        <tr>Country: {this.props.event.country}</tr>
+                        <tr>City: {this.props.event.city}</tr>
+                </table>
+
         }
 
         return(
             <div>
-                <p onClick={this.handleClick}>{this.props.event.title}</p>
+                <h2 onClick={this.handleClick}>{this.props.event.title}</h2>
                 {details}
+
             </div>
         )
     }

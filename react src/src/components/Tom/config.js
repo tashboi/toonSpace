@@ -1,13 +1,14 @@
 import React from "react";
 import {
     createChatBotMessage,
-    createCustomMessage,
 } from 'react-chatbot-kit';
 
 import HelpOptions from "./HelpOptions/HelpOptions";
 import LinkList from "./LinkList/LinkList";
-import Booking121 from './CustomMessages/Booking121.js';
+import Booking121 from './CustomMessages/Booking121/Booking121.js';
 import RandomEvent from "./CustomMessages/Events/RandomEvent";
+import AllEvents from "./CustomMessages/Events/AllEvents";
+import EnquiryForm from "./CustomMessages/Equirys/EnquiryForm";
 
 
 const BotName = 'Study Abroad Virtual Helper';
@@ -131,7 +132,8 @@ const config = {
         },
     ],customMessages: {
         RandomEvent: (props) => <RandomEvent {...props} />,
-
+        AllEvents:  (props) => <AllEvents {...props} />,
+        EnquiryForm: (props) => <EnquiryForm {...props} />
     }
 };
 

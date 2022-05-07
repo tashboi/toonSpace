@@ -10,10 +10,13 @@ class chatbotDisplay extends React.Component {
 
     render(){
 
+
         return(
+
             <div id="ChatBotDiv">
-            <Chatbot config={config} messageParser={MessageParser} actionProvider={ActionProvider} />
+            <Chatbot config={config} messageParser={MessageParser} actionProvider={ActionProvider}/>
             </div>
+
         )
     }
 }

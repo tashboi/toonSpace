@@ -11,9 +11,13 @@ class Events extends React.Component {
     }
 
     componentDidMount() {
-        const url = "http://unn-w18011022.newnumyspace.co.uk/Y3/toonSpace/api/events?id=random"
+        let url = "http://unn-w18011022.newnumyspace.co.uk/Y3/toonSpace/api/events"
 
-
+        if (this.props.id !== undefined) {
+            url += "?id=" + this.props.id
+        } else if (this.props.randomEvent) {
+            url += "?id=random"
+        }
 
 
         fetch(url)
