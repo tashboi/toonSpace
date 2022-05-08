@@ -7,8 +7,6 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ChatBotDisplay from "./components/Tom/chatbotDisplay";
 import React, { useState } from 'react';
 
-
-
 function App() {
     const [show,setShow]=useState(false)
   return (

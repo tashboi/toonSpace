@@ -26,8 +26,8 @@ const HelpOptions = (props) => {
             handler: props.actionProvider.handle121booking,
             id: 5},
         {
-            text: "Other",
-            handler: () => {},
+            text: "Events happening for students around the world",
+            handler: props.actionProvider.handleShowAllEvents,
             id: 6 },
     ];
 

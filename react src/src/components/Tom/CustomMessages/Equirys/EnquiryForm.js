@@ -1,9 +1,10 @@
 import React from 'react';
 
 const EnquiryForm = () => {
+
     return (
         <div className = "react-chatbot-kit-chat-bot-message">
-            <form>
+            <form action="./EnquiryMail.php" method="post">
                 <h2>Enquiry Form</h2>
                 First Name:
                 <input type="text" id="fname" name="fname" />
@@ -14,6 +15,9 @@ const EnquiryForm = () => {
                 Email:
                 <br></br>
                 <input type="email" id="email" name="email" />
+                <br></br>
+                Enquiry Subject:
+                <input type="text" id="subject" name="subject" />
                 <br></br>
                 Type your enquiry below:
                 <textarea name="enquiry" rows="4" cols="20"/>

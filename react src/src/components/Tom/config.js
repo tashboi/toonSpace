@@ -31,20 +31,20 @@ const config = {
             props: {
                 options: [
                     {
-                        text: "Incoming students link 1",
+                        text: "Life im Newcastle",
                         url:
-                            "https://www.google.co.uk",
+                            "https://www.northumbria.ac.uk/study-at-northumbria/visit-northumbria/life-in-newcastle/",
                         id: 1,
                     },
                     {
-                        text: "Incoming students link 2",
+                        text: "Useful Information",
                         url:
-                            "https://www.google.co.uk",
+                            "https://www.northumbria.ac.uk/international/incoming-students/useful-information",
                         id: 2,
                     },
                     {
-                        text: "Incoming students link 3",
-                        url: "https://www.google.co.uk",
+                        text: "Accomodation in Newcastle",
+                        url: "https://www.northumbria.ac.uk/study-at-northumbria/accommodation/",
                         id: 3,
                     },
                 ],
@@ -61,20 +61,20 @@ const config = {
             props: {
                 options: [
                     {
-                        text: "Outgoing students link 1",
+                        text: "Where can you study?",
                         url:
-                            "https://www.google.co.uk",
+                            "https://nu.moveon4.com/publisher/3/eng#",
                         id: 1,
                     },
                     {
-                        text: "Outgoing students link 2",
+                        text: "How to apply ",
                         url:
-                            "https://www.google.co.uk",
+                            "https://www.northumbria.ac.uk/international/study-abroad-exchange-and-erasmus/non-erasmus/how-to-apply/",
                         id: 2,
                     },
                     {
-                        text: "Outgoing students link 3",
-                        url: "https://www.google.co.uk",
+                        text: "Study abroad process",
+                        url: "https://www.northumbria.ac.uk/international/study-abroad-exchange-and-erasmus/study-abroad-processes",
                         id: 3,
                     },
                 ],
@@ -86,21 +86,25 @@ const config = {
             props: {
                 options: [
                     {
-                        text: "Application help link 1",
+                        text: "How to apply!",
                         url:
-                            "https://www.google.co.uk",
+                            "https://www.northumbria.ac.uk/international/incoming-students/how-to-apply",
                         id: 1,
                     },
                     {
-                        text: "Application help link 2",
+                        text: "Academic Requirments",
                         url:
-                            "https://www.google.co.uk",
+                            "https://www.northumbria.ac.uk/international/incoming-students/academic-and-english-language-requirements",
                         id: 2,
                     },
                     {
-                        text: "Application help link 3",
-                        url: "https://www.google.co.uk",
+                        text: "Exchange Application Guide",
+                        url: "https://northumbria-cdn.azureedge.net/-/media/international/sa-exch-s2-202021/exchange-application-guidelines-202021.pdf?modified=20210310153302",
                         id: 3,
+                    },{
+                        text: "Student Guidance",
+                        url: "https://northumbria-cdn.azureedge.net/-/media/international/incoming-saexch-website-202122/student-guidance-2022.pdf?modified=20220128141256",
+                        id: 4,
                     },
                 ],
             },
@@ -111,20 +115,20 @@ const config = {
             props: {
                 options: [
                     {
-                        text: "Financial help link 1",
+                        text: "Northumbria Financial Help Site",
                         url:
-                            "https://www.google.co.uk",
+                            "https://www.northumbria.ac.uk/study-at-northumbria/support-for-students/financial-support/",
                         id: 1,
                     },
                     {
-                        text: "Financial help link 2",
+                        text: "Funding for EU students",
                         url:
-                            "https://www.google.co.uk",
+                            "https://www.northumbria.ac.uk/study-at-northumbria/support-for-students/financial-support/funding-for-eu-students/",
                         id: 2,
                     },
                     {
-                        text: "Financial Help link 3",
-                        url: "https://www.google.co.uk",
+                        text: "Funding for International students",
+                        url: "https://www.northumbria.ac.uk/study-at-northumbria/support-for-students/financial-support/funding-for-international-students/",
                         id: 3,
                     },
                 ],
