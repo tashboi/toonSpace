@@ -1,13 +1,12 @@
 import React from "react";
 import Thread from "./thread.js";
 import Search from "./search.js";
-import  UserContext from "./userContext.js";
+import NewThread from "./newThread.js";
 class ThreadPage extends React.Component {
-    static contextType = UserContext;   
     constructor(props) {
         super(props)
         this.state = {
-            Authenticated:false,
+            authenticated:false,
            userID: null,
 		   page:1
         }
@@ -16,9 +15,7 @@ class ThreadPage extends React.Component {
         if(localStorage.getItem('loginToken')) {
             this.setState({authenticated:true});
             const id = localStorage.getItem("UserID")
-            console.log(id);
             this.state.userID =  JSON.parse(id);
-            console.log("userid= "+this.state.userID);
         }
     }
 
@@ -33,15 +30,15 @@ class ThreadPage extends React.Component {
  }
 
     render() {
-        console.log(this.state.search)
-        return (
+        return this.state.authenticated? (
             <div>
 					<h2>Thread Page</h2>
 				<Search search={this.state.search} handleSearch={this.handleSearch} />
+                <NewThread />
 				<Thread search={this.state.search} page={this.state.page}  handleNextClick={this.handleNextClick} 
                handlePreviousClick={this.handlePreviousClick} />
             </div>
-        )
+        ):<div><p>Please Login to view</p></div>
     }
 }
 export default ThreadPage;

@@ -16,6 +16,18 @@ switch ($request->getPath()) {
     case 'api':
         $controller = new ApiBaseController($request, $response);
         break;
+    case 'api/threadit':
+            $controller = new ApiEditThreadController($request, $response);
+        break;
+    case 'api/threadelete':
+            $controller = new ApiDeleteThreadController($request, $response);
+        break;
+        case 'api/ecomment':
+            $controller = new ApiEditCommentController($request, $response);
+        break;
+        case 'api/dcomment':
+            $controller = new ApiDeleteCommentController($request, $response);
+        break;
  case 'api/authenticate':
             $controller = new ApiAuthenticateController($request, $response);
         break;

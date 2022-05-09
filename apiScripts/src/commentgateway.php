@@ -16,5 +16,12 @@ public function newComments($id, $userid, $order, $content, $cid) {
     $sql = "INSERT into Comments (ThreadID, AuthorID, cOrder, cContent, CommentID ) VALUES ('$id','$userid','$order','$content','$cid')";
     $result = $this->getDatabase()->executeSQL($sql);
 }
-
+public function editComment($content, $cid){
+    $sql = "UPDATE Comments SET cContent = '$content' WHERE CommentID = '$cid'";
+    $result = $this->getDatabase()->executeSQL($sql);
+}
+public function deleteComment($cid){
+    $sql = "DELETE FROM Comments WHERE CommentID = '$cid'";
+    $result = $this->getDatabase()->executeSQL($sql);
+}
 }

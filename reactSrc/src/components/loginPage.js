@@ -1,11 +1,9 @@
 import React from "react";
 import Login from "./login.js";
 import Logout from "./logout.js";
-import UserContext from "./userContext.js";
 
 
 class LoginPage extends React.Component {
-    static contextType = UserContext;
     constructor(props) {
         super(props);
         this.state = { 

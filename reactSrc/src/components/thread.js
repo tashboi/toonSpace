@@ -34,8 +34,7 @@ componentDidMount() {
         
  }
  filterSearch = (s) => {return s.ThreadTitle.toLowerCase().includes(this.props.search.toLowerCase()) };
- render () {
-  console.log(this.state.results)
+ render () {    
 	 let buttons = ""
 	 let filteredResults = this.state.results
 	 if (this.props.search !== undefined){

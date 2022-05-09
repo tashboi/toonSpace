@@ -1,5 +1,8 @@
 <?php 
-
+/**
+ * @Author Daniel Fimister 18018515
+ * Error handles for JSON results
+ */
 function JSONexceptionHandler($e) {
     header("Access-Control-Allow-Origin: *");
     header("Content-Type: application/json; charset=UTF-8");

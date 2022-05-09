@@ -1,8 +1,8 @@
 <?php
 
 define('BASEPATH', '/26test/new/');
-define('USER_DATABASE', 'db/user.sqlite');
-define('THREAD_DATABASE', 'db/threads.sqlite');  
+define('USER_DATABASE', 'db/user.sqlite'); 
+define('THREAD_DATABASE', 'db/threads.sqlite'); 
 define('DEVELOPMENT_MODE', true);
 define('SECRET_KEY', '4O235jPqhv');
 

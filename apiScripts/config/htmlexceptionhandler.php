@@ -1,5 +1,8 @@
 <?php 
-
+/**
+ * @Author Daniel Fimister 18018515
+ * Handles HTML error script
+ */
 function HTMLexceptionHandler($e) {
     echo "<p>internal server error! (Status 500)</p>";
         if (DEVELOPMENT_MODE) {
