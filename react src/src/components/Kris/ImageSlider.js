@@ -29,7 +29,7 @@ if(!Array.isArray(slides) || slides.length <= 0) {
 				
 					{index === current && (<img src={slide.image} alt="image" className="image"/>)}
 					<div>
-						<ChatbotEvent eventid={1} />
+
 					</div>
 
 
