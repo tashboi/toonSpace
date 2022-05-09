@@ -6,7 +6,7 @@ import Registerpage from './components/registerpage.js';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ChatBotDisplay from "./components/Tom/chatbotDisplay";
 import React, { useState } from 'react';
-import Eventspage from "./components/eventspage";
+import Eventspage from "./components/Kris/eventspage";
 
 function App() {
     const [show,setShow]=useState(false)

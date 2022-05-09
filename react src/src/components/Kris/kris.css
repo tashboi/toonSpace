@@ -9,7 +9,9 @@
 			"searchBar sideImageSect"
 			"footer footer";
 }
-
+#eventarea{
+    background-color: yellow;
+}
 header {
     grid-area: header;
     background-color: black;

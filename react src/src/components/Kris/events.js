@@ -40,7 +40,9 @@ class Events extends React.Component {
     filterSearch = (s) => {
         return s.title.toLowerCase().includes(this.props.search.toLowerCase())
     }
-
+    filterByFilter = (f) => {
+        return ((f.ChoiceFilter === this.props.filter) || (this.props.filter===""))
+    }
 
 
 
