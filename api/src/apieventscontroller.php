@@ -10,6 +10,7 @@ class ApiEventsController extends Controller {
 
         $id = $this->getRequest()->getParameter("id");
         $upcoming = $this->getRequest()->getParameter("upcoming");
+        $cheapest = $this->getRequest()->getParameter("cheapest");
         
 
         if ($this->getRequest()->getRequestMethod() === "GET")
@@ -25,6 +26,9 @@ class ApiEventsController extends Controller {
             }
             elseif ($upcoming) {
                 $this->getGateway()->sortDate($upcoming);
+            }
+            elseif ($cheapest) {
+                $this->getGateway()->sortPrice($cheapest);
             }
             else {
                 $this->getGateway()->findAll();

@@ -18,9 +18,7 @@ switch ($request->getPath()) {
         case 'api':
             $controller = new ApiBaseController($request, $response);
             break;
-        case 'imgs':
-            echo"IMGS";
-            break;
+
         case 'api/events':
             $controller = new ApiEventsController($request, $response);
             break;
