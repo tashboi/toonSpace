@@ -6,6 +6,7 @@ import Registerpage from './components/registerpage.js';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ChatBotDisplay from "./components/Tom/chatbotDisplay";
 import React, { useState } from 'react';
+import Eventspage from "./components/eventspage";
 
 function App() {
     const [show,setShow]=useState(false)
@@ -18,6 +19,7 @@ function App() {
            <ul>
              <li><Link to="/">Home</Link></li>
              <li><Link to="register">Register</Link></li>
+             <li><Link to="events">Events</Link></li>
              <LoginPage/>
            </ul>
          </nav>
@@ -25,6 +27,7 @@ function App() {
       </header>
         <body>
         <Routes>
+            <Route path="events" element={<Eventspage/>} />
             <Route path="/" element={<HomePage/>} />
             <Route path="register" element={<Registerpage/>}/>
             <Route path="*" element={<ErrorPage />} />
@@ -35,6 +38,8 @@ function App() {
             show? <ChatBotDisplay />
                 :null
         }
+
+        <p> hi</p>
         <button onClick={()=>setShow(!show)}>Toggle</button>
         </div>
 

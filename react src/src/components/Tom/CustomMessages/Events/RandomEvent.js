@@ -1,10 +1,10 @@
 import React from 'react';
-import Events from "./events";
+import Chatbotevents from "./Chatbotevents";
 
 const RandomEvent = () => {
     return (
         <div className = "react-chatbot-kit-chat-bot-message">
-        <Events randomEvent={true}  />
+        <Chatbotevents randomEvent={true}  />
         </div>
 
     );

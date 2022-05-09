@@ -1,10 +1,10 @@
 import React from 'react';
-import Events from "./events";
+import Chatbotevents from "./Chatbotevents";
 
 const AllEvents = () => {
     return (
         <div className = "react-chatbot-kit-chat-bot-message">
-            <Events />
+            <Chatbotevents />
         </div>
 
 

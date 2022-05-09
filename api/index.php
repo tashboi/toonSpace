@@ -13,10 +13,13 @@ if (substr($request->getPath(),0,3) === "api") {
 
 switch ($request->getPath()) {
         case '':
-            
+
         break;
         case 'api':
             $controller = new ApiBaseController($request, $response);
+            break;
+        case 'x':
+            include 'src/displayimg.php';
             break;
         case 'api/events':
             $controller = new ApiEventsController($request, $response);

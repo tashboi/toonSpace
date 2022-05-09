@@ -95,7 +95,7 @@ class ActionProvider {
     };
 
     handleRandomEvent = () => {
-        const message = this.createCustomMessage("A random Event","RandomEvent")
+        const message = this.createCustomMessage("A random ChatbotEvent","RandomEvent")
         const message2 = this.createChatBotMessage(
             "Here is a random event. You can click it to see more details about the event"
         );
