@@ -1,7 +1,9 @@
 
+
+
 export const SliderData = [
 	{
-		image: 'http://unn-w18011022.newnumyspace.co.uk/Y3/toonSpace/x/imgs/web/event3.jpg'
+		image: 'http://unn-w18011022.newnumyspace.co.uk/imgs/event1.jpg',
 	},
 	{
 		image: 'https://images.unsplash.com/photo-1651908026232-81893bfb69ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
@@ -13,7 +15,7 @@ export const SliderData = [
 		image: 'https://images.unsplash.com/photo-1648737153811-69a6d8c528bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
 	},
 	{
-		image: 'https://images.unsplash.com/photo-1650865939539-583831ef0c00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+		image: 'https://images.unsplash.com/photo-1648737153811-69a6d8c528bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
 	}
 ]
 

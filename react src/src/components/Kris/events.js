@@ -1,7 +1,8 @@
 import React from "react";
-import ChatbotEvent from "./chatbotEvent";
+import Event from "./event";
 
-class Chatbotevents extends React.Component {
+
+class Events extends React.Component {
 
     constructor(props){
         super(props)
@@ -36,20 +37,32 @@ class Chatbotevents extends React.Component {
             });
     }
 
+    filterSearch = (s) => {
+        return s.title.toLowerCase().includes(this.props.search.toLowerCase())
+    }
+
+
+
+
 
     render() {
         let noData = ""
         if (this.state.results.length === 0) {
             noData = <p>No data</p>
         }
+        let data = this.state.results
+
+        if (this.props.search !== undefined){
+            data = data.filter(this.filterSearch)
+        }
 
         return (
             <div>
                 {noData}
-                {this.state.results.map( (event, i) => (<ChatbotEvent key={i} event={event}/>) )}
+                {data.map( (event, i) => (<Event key={i} event={event}/>) )}
             </div>
         )
     }
 }
 
-export default Chatbotevents;
+export default Events;

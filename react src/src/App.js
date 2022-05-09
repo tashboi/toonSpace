@@ -39,7 +39,6 @@ function App() {
                 :null
         }
 
-        <p> hi</p>
         <button onClick={()=>setShow(!show)}>Toggle</button>
         </div>
 

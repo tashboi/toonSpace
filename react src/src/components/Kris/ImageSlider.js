@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import {SliderData} from './SliderData';
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
-import ChatbotEvent from "../Tom/CustomMessages/Events/chatbotEvent";
+
+
+
 
 const ImageSlider = ({slides}) => {
 const [current, setCurrent] = useState(0)
@@ -26,12 +28,9 @@ if(!Array.isArray(slides) || slides.length <= 0) {
 			{SliderData.map((slide, index) => {
 				return (
 				<div className={index === current ? 'slide active' : 'slide'} key={index}>
-				
-					{index === current && (<img src={slide.image} alt="image" className="image"/>)}
 					<div>
-
+					{index === current && (<img src={slide.image} alt="image" className="image"/>)}
 					</div>
-
 
 				</div>
 

@@ -4,6 +4,7 @@ import ImageSlider from './Kris/ImageSlider';
 import sideImage from './Kris/sideImage.jpg';
 import React from "react";
 import SearchBox from "./Tom/searchbox";
+import Events from "./Kris/events";
 
 class eventspage extends React.Component {
 
@@ -12,7 +13,6 @@ class eventspage extends React.Component {
         this.state = {
             language: "",
             search: "",
-            eventid: ""
         }
         this.handleSearch = this.handleSearch.bind(this);
     }
@@ -21,9 +21,6 @@ class eventspage extends React.Component {
         this.setState({search:e.target.value})
     }
 
-    handleEventID = (e) => {
-        this.setState({language:e.target.value})
-    }
 
 
 
@@ -41,8 +38,8 @@ class eventspage extends React.Component {
 
             <aside id="searchBar">
                 <SearchBox search={this.state.search} handleSearch={this.handleSearch} />
+                <Events search={this.state.search}/>
             </aside>
-
             <aside id="sideImageSect">
                 <img src={sideImage} className="sideImage" alt="Man Exploring Street"/>
             </aside>
