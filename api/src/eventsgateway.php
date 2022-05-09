@@ -20,6 +20,17 @@ class EventsGateway extends Gateway  {
         $result = $this->getDatabase()->executeSQL($this->sql);
         $this->setResult($result);
     }
+    public function findID($id){
+        $this->sql .= "WHERE event.id = :id";
+        $params = ["id" => $id];
+        $result = $this->getDatabase()->executeSQL($this->sql, $params);
+        if (count($result) > 0){
+            $this->setResult($result);
+        }else{
+            $result = "No Event with this ID!";
+            $this->setResult($result);
+        }
+    }
 
 
 }
