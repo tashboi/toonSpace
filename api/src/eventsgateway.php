@@ -31,6 +31,11 @@ class EventsGateway extends Gateway  {
             $this->setResult($result);
         }
     }
+    public function sortDate(){
+        $this->sql .= " ORDER BY date desc";
+        $result = $this->getDatabase()->executeSQL($this->sql);
+        $this->setResult($result);
+    }
 
 
 }

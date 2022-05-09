@@ -9,6 +9,7 @@ class ApiEventsController extends Controller {
     protected function processRequest() {
 
         $id = $this->getRequest()->getParameter("id");
+        $upcoming = $this->getRequest()->getParameter("upcoming");
         
 
         if ($this->getRequest()->getRequestMethod() === "GET")
@@ -21,7 +22,11 @@ class ApiEventsController extends Controller {
                 } else {
                     $this->getGateway()->findID($id);
                 }
-            } else {
+            }
+            elseif ($upcoming) {
+                $this->getGateway()->sortDate($upcoming);
+            }
+            else {
                 $this->getGateway()->findAll();
             }
 
