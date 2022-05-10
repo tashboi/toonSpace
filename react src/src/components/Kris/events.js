@@ -11,7 +11,9 @@ class Events extends React.Component {
         }
     }
 
+
     componentDidMount() {
+
         let url = "http://unn-w18011022.newnumyspace.co.uk/Y3/toonSpace/api/events"
 
         if (this.props.filter === "upcoming") {
@@ -43,6 +45,45 @@ class Events extends React.Component {
             .catch ((err) => {
                 console.log("something went wrong ", err)
             });
+
+    }
+
+
+    componentDidUpdate(prevProps) {
+        if (this.props.filter !== prevProps.filter) {
+            let url = "http://unn-w18011022.newnumyspace.co.uk/Y3/toonSpace/api/events"
+
+            if (this.props.filter === "upcoming") {
+                url += "?upcoming=true"
+            }
+            if (this.props.filter === "cheapest") {
+                url += "?cheapest=true"
+            }
+
+
+            if (this.props.eventid !== undefined) {
+                url += "?id=" + this.props.eventid
+            } else if (this.props.randomEvent) {
+                url += "?id=random"
+            }
+
+
+            fetch(url)
+                .then( (response) => {
+                    if (response.status === 200) {
+                        return response.json()
+                    } else {
+                        throw Error(response.statusText);
+                    }
+                })
+                .then( (data) => {
+                    this.setState({results:data.results})
+                })
+                .catch ((err) => {
+                    console.log("something went wrong ", err)
+                });
+
+        }
     }
 
 
@@ -55,6 +96,7 @@ class Events extends React.Component {
 
 
     render() {
+
         let noData = ""
         if (this.state.results.length === 0) {
             noData = <p>No data</p>
@@ -65,7 +107,7 @@ class Events extends React.Component {
         if (this.props.search !== undefined){
             data = data.filter(this.filterSearch)
         }
-
+        console.log(this.props.filter, this.props.search)
         return (
 
             <div>
@@ -74,6 +116,7 @@ class Events extends React.Component {
             </div>
         )
     }
+
 }
 
 export default Events;
