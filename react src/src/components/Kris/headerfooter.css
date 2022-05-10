@@ -65,7 +65,7 @@
 }
 
 #NULogo {
-	margin-left: 10px;
+	
 	height: 160px;
 	width: 300px;
 }
@@ -75,35 +75,35 @@
 }
 
 
-#navLink
+nb 
 {
 	position: relative;
-	top: 15px;
-	float: left;
+	top: 17px;
+	left: 30px;
 	color:white;
 	text-decoration:none;
-	margin-left: 15px;
+	margin-left: 8px;
 	font-size: 17px;
 }
-#navLink:link
+nb:link
 {
 	border-bottom-color: white;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 }
-#navLink:visited
+nb:visited
 {
 	border-bottom-color: white;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 }
-#navLink:hover
+nb:hover
 {
 	border-bottom-color: white;
 	border-bottom-width: 5px;
 	border-bottom-style: solid;
 }
-#navLink:active 
+nb:active 
 {
 	border-bottom-color: white;
 	border-bottom-width: 5px;

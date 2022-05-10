@@ -10,7 +10,7 @@
 			"footer footer";
 }
 #eventarea{
-    
+    background-color: yellow;
 }
 header {
     grid-area: header;
@@ -28,19 +28,10 @@ footer {
 
 #searchBar {
     grid-area: searchBar;
-	margin-left: 10px;
 }
 
 #sideImageSect {
     grid-area: sideImageSect;
-	margin: 40px;	
-}
-#sideImageSect img{
-	width: 100%;
-	height: 50%;
-	border-style: outset;
-	border-color: black;
-	border-width: 5px;
 }
 
 .slider{
@@ -93,34 +84,4 @@ footer {
     width: 400px;
     height: 600px;
     float: right;
-	border-radius: 2px;
-}
-
-table {
-	width: 80%;
-	margin: 5px;
-	margin-left: 50px;
-	padding: 10px;
-	background-color: black;
-	border-radius: 2px;
-	
-}
-.imageB {
-	margin: 10px;
-	width: 90%;
-	height: 60%;
-	border-radius: 5px;
-}
-tr {
-	border-bottom-style: solid;
-	border-bottom-width: 2px;
-	border-bottom-color: white;
-	color: white;
-	text-align: center-left;
-	font-size: 19px;
-}
-
-#eventTitle{
-	font-size: 30px;
-	text-align: center;
 }

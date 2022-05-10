@@ -1,4 +1,3 @@
-import './kris.css';
 import React from "react";
 
 class Event extends React.Component {
@@ -29,8 +28,8 @@ class Event extends React.Component {
 
         return(
             <div id = "eventarea">
-                <h2 id="eventTitle" onClick={this.handleClick}>{this.props.event.title}</h2>
-                <img src={"http://unn-w18011022.newnumyspace.co.uk/imgs/" + this.props.event.IMGurl} alt="image" className="imageB"/>
+                <h2 onClick={this.handleClick}>{this.props.event.title}</h2>
+                <img src={"http://unn-w18011022.newnumyspace.co.uk/imgs/" + this.props.event.IMGurl} alt="image" className="image"/>
                 {details}
 
             </div>
