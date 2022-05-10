@@ -12,11 +12,11 @@ class eventspage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            filter: "",
+            filter: "cheapest",
             search: "",
         }
         this.handleSearch = this.handleSearch.bind(this);
-        this.handleSearch = this.handleSearch.bind(this);
+        this.handleFilterSelect = this.handleFilterSelect.bind(this);
     }
 
     handleSearch = (e) => {
@@ -28,14 +28,11 @@ class eventspage extends React.Component {
     }
 
 
-
     render(){
-
+console.log(this.state.filter)
     return (
         <div id="gridContainer">
-            <header>
 
-            </header>
 
             <main>
                 <ImageSlider slides={SliderData}/>
@@ -44,15 +41,11 @@ class eventspage extends React.Component {
             <aside id="searchBar">
                 <SearchBox search={this.state.search} handleSearch={this.handleSearch} />
                 <SelectFilter filter={this.state.filter} handleFilterSelect={this.handleFilterSelect} />
-                <Events search={this.state.search}/>
+                <Events search={this.state.search} filter={this.state.filter}/>
             </aside>
             <aside id="sideImageSect">
                 <img src={sideImage} className="sideImage" alt="Man Exploring Street"/>
             </aside>
-
-            <footer className="EventsFooter">
-
-            </footer>
 
         </div>
     );

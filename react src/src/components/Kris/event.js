@@ -20,6 +20,8 @@ class Event extends React.Component {
                     <tr>Category: {this.props.event.category}</tr>
                     <tr>Country: {this.props.event.country}</tr>
                     <tr>City: {this.props.event.city}</tr>
+                    <tr>Price: £{this.props.event.price}</tr>
+                    <tr>Date: {this.props.event.date}</tr>
                 </table>
 
         }

@@ -14,6 +14,14 @@ class Events extends React.Component {
     componentDidMount() {
         let url = "http://unn-w18011022.newnumyspace.co.uk/Y3/toonSpace/api/events"
 
+        if (this.props.filter === "upcoming") {
+            url += "?upcoming=true"
+        }
+        if (this.props.filter === "cheapest") {
+            url += "?cheapest=true"
+        }
+
+
         if (this.props.eventid !== undefined) {
             url += "?id=" + this.props.eventid
         } else if (this.props.randomEvent) {
@@ -37,13 +45,12 @@ class Events extends React.Component {
             });
     }
 
+
+
+
     filterSearch = (s) => {
         return s.title.toLowerCase().includes(this.props.search.toLowerCase())
     }
-    filterByFilter = (f) => {
-        return ((f.ChoiceFilter === this.props.filter) || (this.props.filter===""))
-    }
-
 
 
 
@@ -54,11 +61,13 @@ class Events extends React.Component {
         }
         let data = this.state.results
 
+
         if (this.props.search !== undefined){
             data = data.filter(this.filterSearch)
         }
 
         return (
+
             <div>
                 {noData}
                 {data.map( (event, i) => (<Event key={i} event={event}/>) )}
