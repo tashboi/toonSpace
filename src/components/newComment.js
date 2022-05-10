@@ -67,7 +67,7 @@ class NewComment extends React.Component{
                 <label>
                 Content:
                 <textarea value={this.state.content} onChange={this.handleNewContent} />
-                </label>
+                </label><br/>
                 {buttons}
                 </form>
             </div>

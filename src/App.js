@@ -1,15 +1,15 @@
-import logo from './logo.svg';
+import "./App.css";
 import LoginPage from './components/loginPage.js';
 import Registration from './components/registration.js';
 import ThreadPage from './components/threadPage.js';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import {useContext, useState} from 'react';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <BrowserRouter >
+       <HashRouter >
        <div>
          <nav>
            <ul>
@@ -24,7 +24,7 @@ function App() {
            <Route path="thread" element={<ThreadPage/>}/>
          </Routes>
        </div>
-       </BrowserRouter>
+       </HashRouter>
       </header>
     </div>
   );

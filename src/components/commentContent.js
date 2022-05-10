@@ -19,8 +19,8 @@ class CommentContent extends React.Component {
 	else {tinker=null}
 	 return(
 		 
-		<div>
-			<p>{this.props.comment.cContent}</p>
+		<div id="cbackground">
+			<p id="commentContent">{this.props.comment.cContent}</p>
 			{tinker}
 		</div>
 	 );

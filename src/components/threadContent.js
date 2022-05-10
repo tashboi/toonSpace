@@ -57,9 +57,9 @@ class ThreadContent extends React.Component {
 		}
 		else{tinker=""}
 		if (this.state.display){
-			paperDetails = <div>
-			<p>Content: {this.props.thread.ThreadContent}</p>
-			<p>ID: {this.props.thread.ThreadID}</p>
+			paperDetails = <div id="moreThread">
+			<p id="threadContent">ID: {this.props.thread.ThreadID}</p>
+			<p id="threadContent">{this.props.thread.ThreadContent}</p>
 			{tinker}
 			{indiComments.map((comment,i) =>(<CommentContent key={i} userID={this.state.userID} comment={comment}/>))}
 			<p>New Comment:</p>
@@ -68,8 +68,8 @@ class ThreadContent extends React.Component {
 
 		}
 	 return(
-		<div>
-			<p>{this.props.thread.ThreadTitle}</p><button onClick={this.handleClick}>Expand</button>
+		<div id="threadBase">
+			<p id="threadTitle">{this.props.thread.ThreadTitle}</p><button onClick={this.handleClick}>Expand</button>
 			{paperDetails}
 		</div>
 	 );

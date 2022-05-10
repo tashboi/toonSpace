@@ -31,8 +31,8 @@ class ThreadPage extends React.Component {
 
     render() {
         return this.state.authenticated? (
-            <div>
-					<h2>Thread Page</h2>
+            <div id="tbackground">
+					<h2>Threads</h2>
 				<Search search={this.state.search} handleSearch={this.handleSearch} />
                 <NewThread />
 				<Thread search={this.state.search} page={this.state.page}  handleNextClick={this.handleNextClick} 
