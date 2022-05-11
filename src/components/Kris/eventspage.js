@@ -29,7 +29,6 @@ class eventspage extends React.Component {
 
 
     render(){
-console.log(this.state.filter)
     return (
         <div id="gridContainer">
 

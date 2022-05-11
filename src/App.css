@@ -1,23 +1,17 @@
 .App {
 }
 
-#ChatBotDiv{
-  background: red;
-
-
-}
 #ChatbotPosition{
   position:sticky;
   bottom:0;
   float: right;
 }
-#RegistrationForm{
-  background: blue;
-}
 
 p{
   font-size: 20px;
-  color: red;
+}
+.ChatbotEvents{
+
 }
 
 
@@ -34,3 +28,6 @@ p{
 .App-link {
   color: #61dafb;
 }
+
+
+

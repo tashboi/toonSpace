@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../../App.css"
 
 class ChatbotEvent extends React.Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class ChatbotEvent extends React.Component {
 
         if (this.state.display) {
             details =
-                <table>
+                <table className="ChatbotEvents">
                         <tr>Description: {this.props.event.description}</tr>
                         <tr>Category: {this.props.event.category}</tr>
                         <tr>Country: {this.props.event.country}</tr>

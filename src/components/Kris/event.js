@@ -16,7 +16,7 @@ class Event extends React.Component {
 
         if (this.state.display) {
             details =
-                <table>
+                <table className="EventDisplay">
                     <tr>Description: {this.props.event.description}</tr>
                     <tr>Category: {this.props.event.category}</tr>
                     <tr>Country: {this.props.event.country}</tr>
@@ -28,8 +28,8 @@ class Event extends React.Component {
         }
 
         return(
-            <div id = "eventarea">
-                <h2 id="eventTitle" onClick={this.handleClick}>{this.props.event.title}</h2>
+            <div id = "eventarea" onClick={this.handleClick}>
+                <h2 id="eventTitle" >{this.props.event.title}</h2>
                 <img src={"http://unn-w18011022.newnumyspace.co.uk/imgs/" + this.props.event.IMGurl} alt="image" className="imageB"/>
                 {details}
 

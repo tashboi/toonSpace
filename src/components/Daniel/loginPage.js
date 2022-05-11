@@ -2,16 +2,16 @@ import React from "react";
 import Login from "./login.js";
 import Logout from "./logout.js";
 
-class LoginPage extends React.Component {
 
+class LoginPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
+            useridfinal: '  ',
             authenticated: false, 
             email: "", 
             password: ""
         }
-
         this.handleEmail = this.handleEmail.bind(this);
         this.handlePassword = this.handlePassword.bind(this);
         this.handleLoginClick = this.handleLoginClick.bind(this);
@@ -30,6 +30,7 @@ class LoginPage extends React.Component {
     handleEmail = (e) => {
         this.setState({email:e.target.value})
     }
+
 
     handleLogout = () => {
         this.setState({Authenticated: false});
@@ -69,11 +70,22 @@ class LoginPage extends React.Component {
                 this.setState({ authenticated: true })
                 localStorage.setItem('loginToken', data.results.token); 
             }
+            let newid = parseInt(data.results.id.id);
+            const {userID,setUser} = this.context;
+            console.log(newid);
+            localStorage.setItem("UserID",JSON.stringify(newid));
+            const id = localStorage.getItem("UserID")
+            console.log(id);
+            const FINALID =  JSON.parse(id);
+            console.log("userid= "+FINALID);
+               
+            console.log({userID})
         })
         .catch ((err) => {
             console.log("something went wrong ", err)
             }
         );
+        
     }
 	
     render() {
@@ -97,6 +109,7 @@ class LoginPage extends React.Component {
             <div>{page}</div>
         )
     }
+    this
 }
 
 export default LoginPage;

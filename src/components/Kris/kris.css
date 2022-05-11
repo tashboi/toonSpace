@@ -96,13 +96,13 @@ footer {
 	border-radius: 2px;
 }
 
-table {
-	width: 80%;
-	margin: 5px;
-	margin-left: 50px;
-	padding: 10px;
-	background-color: black;
-	border-radius: 2px;
+.EventDisplay {
+    width: 80%;
+    margin: 5px;
+    margin-left: 50px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 2px;
 	
 }
 .imageB {

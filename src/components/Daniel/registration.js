@@ -1,6 +1,6 @@
 import React from "react";
 import Logout from "./logout.js";
-import Registerpage from "./registerpage.js";
+import Register from "./register.js";
 class Registration extends React.Component {
 
     constructor(props) {
@@ -97,7 +97,7 @@ class Registration extends React.Component {
     render() {
 
         let page = (
-            <Registerpage
+            <Register 
                 handleEmail={this.handleEmail} 
                 handlePassword={this.handlePassword}
                 handleRegisterClick={this.handleRegisterClick}
