@@ -62,10 +62,13 @@
 
 #pageFooter {
 	background-color: black;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 
 #NULogo {
-	
+	margin-left: 10px;
 	height: 160px;
 	width: 300px;
 }
@@ -75,35 +78,35 @@
 }
 
 
-nb 
+#navLink
 {
 	position: relative;
-	top: 17px;
-	left: 30px;
+	top: 15px;
+	float: left;
 	color:white;
 	text-decoration:none;
-	margin-left: 8px;
+	margin-left: 15px;
 	font-size: 17px;
 }
-nb:link
+#navLink:link
 {
 	border-bottom-color: white;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 }
-nb:visited
+#navLink:visited
 {
 	border-bottom-color: white;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 }
-nb:hover
+#navLink:hover
 {
 	border-bottom-color: white;
 	border-bottom-width: 5px;
 	border-bottom-style: solid;
 }
-nb:active 
+#navLink:active 
 {
 	border-bottom-color: white;
 	border-bottom-width: 5px;

@@ -29,19 +29,17 @@ class eventspage extends React.Component {
 
 
     render(){
-console.log(this.state.filter)
     return (
         <div id="gridContainer">
-
 
             <main>
                 <ImageSlider slides={SliderData}/>
             </main>
 
             <aside id="searchBar">
-                <SearchBox search={this.state.search} handleSearch={this.handleSearch} />
-                <SelectFilter filter={this.state.filter} handleFilterSelect={this.handleFilterSelect} />
-                <Events search={this.state.search} filter={this.state.filter}/>
+				<SearchBox search={this.state.search} handleSearch={this.handleSearch} />
+				<SelectFilter filter={this.state.filter} handleFilterSelect={this.handleFilterSelect} />
+				<Events search={this.state.search} filter={this.state.filter}/>
             </aside>
             <aside id="sideImageSect">
                 <img src={sideImage} className="sideImage" alt="Man Exploring Street"/>
