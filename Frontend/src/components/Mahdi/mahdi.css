@@ -1,21 +1,42 @@
-div.events-container{ 
-	width: 350px;
-	padding: 5px;
-	border: 3px, solid grey;
-	border-style: groove;
-	margin: 10px;
+.body {
+  display: flex;
 }
-p.heading{
- text-decoration: underline;
+.body > * {
+  flex-basis: 100%;
 }
-div.eventswindow{
-	width: 400px;
-	padding: 10px;
-	border: 5px solid black;
-	margin: 30px; 
-	height: 1200px;
-	overflow: hidden;
-	overflow-y: scroll;
-	
+div.events-container {
+  width: 75%px;
+  padding: 5px;
+  border: 3px, solid grey;
+  border-style: groove;
+  margin: 10px;
 }
-tr:hover {background-color: #D6EEEE;}
+p.heading {
+  text-decoration: underline;
+}
+div.eventswindow {
+  width: 400px;
+  padding: 10px;
+  border: 5px solid black;
+  margin: 30px;
+  height: 1200px;
+  overflow: hidden;
+  overflow-y: scroll;
+  text-align: center;
+}
+th {
+	background-color: black;
+	color: white;
+  }
+  tr{
+	color: black;
+  }
+table{
+	width:100%;
+}
+div.pagetitle{
+  text-align: center;
+}
+div.itinarary-table{
+	text-decoration-color: black;
+}
