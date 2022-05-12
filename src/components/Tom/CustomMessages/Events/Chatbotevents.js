@@ -1,6 +1,22 @@
 import React from "react";
 import ChatbotEvent from "./chatbotEvent";
 
+
+/**
+ * A Javascript file which gets the information from the api so it can display all the events.
+ * It calls the ChatbotEvent file to display all singular events.
+ *
+ *
+ * It maps the response from the url and passes the information as props into each <ChatbotEvent>.
+ *
+ * Buttons are also defiened and used to help with pagination
+ *
+ * If the props such as eventid or randomEvent are supplied, the url will change to recieve different information
+ *
+ * @author Thomas Ashby
+ */
+
+
 class Chatbotevents extends React.Component {
 
     constructor(props){
@@ -68,8 +84,6 @@ class Chatbotevents extends React.Component {
             results = results.slice(pageMin,pageMax)
 
         }
-
-
 
 
         return (

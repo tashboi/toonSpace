@@ -1,5 +1,9 @@
 import React from "react";
 import Event from "./event";
+/**
+ * @author Kristian Welsh
+ * @author Thomas Ashby
+ */
 
 
 class Events extends React.Component {

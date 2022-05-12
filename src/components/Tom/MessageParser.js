@@ -1,3 +1,17 @@
+/**
+ * A Javascript file which reads the users inputed messages and
+ * preforms different functions depending on the text
+ *
+ * The file passes the variable message. The message then gets checked if it contains key words.
+ * If the message contains a keyword which is defiened. It will then proceed to call the functions from action provider.
+ *
+ * Experimented with using arrays of values. An example being greetings. If an array contains the parsed message, it will then trigger a function.
+ * This allows for not having to rewrite code for every possible greeting.
+ *
+ * @author Thomas Ashby
+ */
+
+
 class MessageParser {
     constructor(actionProvider) {
         this.actionProvider = actionProvider;

@@ -12,6 +12,22 @@ import EnquiryForm from "./CustomMessages/Equirys/EnquiryForm";
 
 
 const BotName = 'Study Abroad Virtual Helper';
+
+/**
+ * A Javascript file which works as the config file for the chatbot.
+ *
+ * The file is the config for the chatbot. It defines the intial message for when the chatbot loads. It also defines the widgets which
+ * are the clickable buttons underneath the initial message. In this instance it displays the Help options.
+ *
+ * The different help options which display links are also defined as widgets. But they call the linklist file and pass information as props
+ *
+ * It also stores the custom messages so they can be used by the chatbot
+ *
+ * @author Thomas Ashby
+ */
+
+
+
 const config = {
 
     initialMessages: [

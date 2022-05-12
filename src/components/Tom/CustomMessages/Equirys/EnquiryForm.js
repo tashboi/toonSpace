@@ -1,6 +1,14 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 
+/**
+ * A Javascript file which is a custom message. The custom message displays an enquiry form which sends an equiry to the client.
+ * It uses the emailJS package to do this.
+ *
+ * @author Thomas Ashby
+ */
+
+
 export default function EnquiryForm() {
 
     const sendEmail = (e) => {

@@ -1,6 +1,12 @@
 import './kris.css';
 import React from "react";
 
+/**
+ * @author Kristian Welsh
+ * @author Thomas Ashby
+ */
+
+
 class Event extends React.Component {
     constructor(props) {
         super(props)

@@ -1,9 +1,17 @@
 import React from "react";
 import "./HelpOptions.css";
 
+/**
+ * A Javascript file which creates an array called options. Options are then mapped to a button.
+ *
+ * Functions are also attached to the buttons so once they are clicked they do something
+ *
+ * @author Thomas Ashby
+ */
+
 const HelpOptions = (props) => {
 
-    // Provides the
+
     const options = [
         {
             text: "Incoming Student",

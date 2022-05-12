@@ -1,6 +1,18 @@
 import React from "react";
 import "../../../../App.css"
 
+/**
+ * A Javascript file which displays a single event. ChatbotEvents displays all the events but ChatbotEvent displays a singular event.
+ * It loops through every event which is present and displays them in their own indiviual table.
+ *
+ * The information is hidden and only can be displayed after Clicking the event title. Only event titles are displayed at first.
+ * The details are stored as variable which only displays if the state display is true.
+ *
+ *
+ * @author Thomas Ashby
+ */
+
+
 class ChatbotEvent extends React.Component {
     constructor(props) {
         super(props)

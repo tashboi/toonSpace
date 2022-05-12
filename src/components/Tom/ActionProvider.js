@@ -15,8 +15,17 @@ class ActionProvider {
         this.createCustomMessage = createCustomMessage;
     }
 
-
-
+    /**
+     * A Javascript file which tells what the chatbot has to do. It provides it with actions
+     *
+     * Once the parsed message in MessageParser has been read, it then calls these functions below depending on
+     * what the message was.
+     *
+     * The chatbot will reply with by creating a chatbotmessage with the supplied text. It could also display the
+     * created custom messages.
+     *
+     * @author Thomas Ashby
+     */
 
 
 
