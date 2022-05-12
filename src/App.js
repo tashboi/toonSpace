@@ -5,9 +5,9 @@ import './App.css';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import ChatBotDisplay from "./components/Tom/chatbotDisplay";
 import React, { useState } from 'react';
-import Eventspage from "./components/Kris/eventspage";
-import Header from "./components/Kris/header";
-import Footer from "./components/Kris/footer";
+import Eventspage from "./components/Kristian/eventspage";
+import Header from "./components/Kristian/header";
+import Footer from "./components/Kristian/footer";
 import Registration from "./components/Daniel/registration";
 import ThreadPage from "./components/Daniel/threadPage";
 import Eventsfeed from "./components/Mahdi/Eventsfeed";
@@ -20,6 +20,7 @@ function App() {
     <div className="App">
      <Header/>
         <body>
+
         <Routes>
             <Route path="events" element={<Eventspage/>} />
             <Route path="/" element={<HomePage/>} />
@@ -33,6 +34,7 @@ function App() {
                 show? <ChatBotDisplay />
                     : <img src={ChatbotImg} onClick={()=>setShow(!show)} />
             }
+
 
         </div>
         </body>
