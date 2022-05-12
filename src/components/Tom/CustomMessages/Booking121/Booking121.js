@@ -1,20 +1,29 @@
 import React from 'react';
-import "./booking121.css"
-const Booking121 = () => {
+import emailjs from 'emailjs-com';
+
+export default function Booking121() {
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('w18011022', 'template_rrfbpee', e.target, 'GtMhllrEOQFZkU0ZV')
+            .then(() => {
+                window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+
     return (
         <div className = "react-chatbot-kit-chat-bot-message">
-            <form action="src/components/Tom/CustomMessages/Booking121/Booking121">
+            <form className="contact-form" onSubmit={sendEmail}>
                 <h2>Booking Form</h2>
-                First Name:
-                <input type="text" id="fname" name="fname" />
-                <br></br>
-                Last Name:
-                <input type="text" id="lname" name="lname" />
-                <br></br>
-                Email:
-                <br></br>
-                <input type="email" id="email" name="email" />
-                <br></br>
+                <label>Name:</label>
+                <input type="text" name="from_name" />
+                <br/>
+                <label>Email:</label>
+                <br/>
+                <input type="email" name="from_email" />
+                <br/>
                 Prefered date for 1 to 1:
                 <input type="date" id="date" name="date" />
                 <br></br>
@@ -24,4 +33,7 @@ const Booking121 = () => {
     );
 };
 
-export default Booking121;
+
+
+
+

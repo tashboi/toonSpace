@@ -1,5 +1,6 @@
 import HomePage from "./components/homepage";
 import ErrorPage from "./components/errorpage";
+import ChatbotImg from  "./img/chatbot.png"
 import './App.css';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import ChatBotDisplay from "./components/Tom/chatbotDisplay";
@@ -25,13 +26,12 @@ function App() {
             <Route path="thread" element={<ThreadPage/>}/>
             <Route path="*" element={<ErrorPage />} />
         </Routes>
-        <div id="ChatbotPosition">
+        <div id="ChatbotPosition" >
             {
                 show? <ChatBotDisplay />
-                    :null
+                    : <img src={ChatbotImg} onClick={()=>setShow(!show)} />
             }
 
-            <button onClick={()=>setShow(!show)}>Toggle</button>
         </div>
         </body>
 

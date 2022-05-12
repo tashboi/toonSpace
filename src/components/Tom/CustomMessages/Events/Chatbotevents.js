@@ -8,6 +8,7 @@ class Chatbotevents extends React.Component {
         this.state = {
             results : []
         }
+
     }
 
     componentDidMount() {
@@ -38,15 +39,44 @@ class Chatbotevents extends React.Component {
 
 
     render() {
-        let noData = ""
+        let noResults = ""
+
+        let results = this.state.results
+
         if (this.state.results.length === 0) {
-            noData = <p>No data</p>
+            noResults = <p>Information couldnt be loaded!</p>
         }
+
+        let buttons = ""
+
+
+        if (this.props.page !== undefined) {
+            const pageSize = 2
+            let pageMax = this.props.page * pageSize
+            let pageMin = pageMax - pageSize
+
+            let finalPage =  Math.ceil(results.length / pageSize)
+
+
+            buttons = (
+                <div>
+                    <p>Page:{this.props.page} of {finalPage}</p>
+                    <button onClick={this.props.handlePreviousClick} disabled={this.props.page <= 1}>Previous</button>
+                    <button onClick={this.props.handleNextClick} disabled={this.props.page >= finalPage} >Next</button>
+                </div>
+            )
+            results = results.slice(pageMin,pageMax)
+
+        }
+
+
+
 
         return (
             <div>
-                {noData}
-                {this.state.results.map( (event, i) => (<ChatbotEvent key={i} event={event}/>) )}
+                {noResults}
+                {results.map( (event, i) => (<ChatbotEvent key={i} event={event}/>) )}
+                {buttons}
             </div>
         )
     }

@@ -121,16 +121,13 @@ class ActionProvider {
     }
 
     handleGreetings = () => {
-        const greetings = ["hi", "hello", "hey"];
+        const greetings = ["Hi there!", "Hello :)", "Hey! Thanks for talking with me"];
         const randomGreeting = Math.floor(Math.random() * greetings.length);
         const message = this.createChatBotMessage(
             greetings[randomGreeting]
         );
         this.updateChatbotState(message);
     }
-
-
-
 
 
 

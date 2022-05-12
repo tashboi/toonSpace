@@ -15,9 +15,12 @@ const BotName = 'Study Abroad Virtual Helper';
 const config = {
 
     initialMessages: [
-        createChatBotMessage(`Hi, I'm ${BotName}! Below are some of the topics i can help with. Either click the option or type your query below to get started. I will do  my best to help! :)`, {
+        createChatBotMessage(`Hi, I'm ${BotName}! Below are some of the topics i can help with.`, {
             widget: "HelpOptions",
-        }),
+        }),createChatBotMessage(`You can either type a question or click the options above if they might answer your query.`,{
+                delay: 3000,
+            }
+        )
     ],
     botName: BotName,
     widgets: [
@@ -31,7 +34,7 @@ const config = {
             props: {
                 options: [
                     {
-                        text: "Life im Newcastle",
+                        text: "Life in Newcastle",
                         url:
                             "https://www.northumbria.ac.uk/study-at-northumbria/visit-northumbria/life-in-newcastle/",
                         id: 1,
@@ -67,7 +70,7 @@ const config = {
                         id: 1,
                     },
                     {
-                        text: "How to apply ",
+                        text: "Non-Erasmus students - How to apply",
                         url:
                             "https://www.northumbria.ac.uk/international/study-abroad-exchange-and-erasmus/non-erasmus/how-to-apply/",
                         id: 2,
@@ -142,34 +145,3 @@ const config = {
 };
 
 export default config;
-
-
-
-
-
-
-
-
-
-
-
-/*
-*
-*
-*
-
-    customComponents: {},
-    customMessages: {
-        custom: (props) => <CustomMessage {...props} />,
-        Booking: (props) => <Booking121 {...props} />
-    },
-    widgets: [],
-};
-
-export default config;
-
-
-*
-*
-*
-*  */

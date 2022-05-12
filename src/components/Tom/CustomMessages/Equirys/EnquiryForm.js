@@ -1,31 +1,38 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
 
-const EnquiryForm = () => {
+export default function EnquiryForm() {
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('w18011022', 'template_e87cagj', e.target, 'GtMhllrEOQFZkU0ZV')
+            .then((result) => {
+                window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
 
     return (
         <div className = "react-chatbot-kit-chat-bot-message">
-            <form action="./EnquiryMail.php" method="post">
-                <h2>Enquiry Form</h2>
-                First Name:
-                <input type="text" id="fname" name="fname" />
-                <br></br>
-                Last Name:
-                <input type="text" id="lname" name="lname" />
-                <br></br>
-                Email:
-                <br></br>
-                <input type="email" id="email" name="email" />
-                <br></br>
-                Enquiry Subject:
-                <input type="text" id="subject" name="subject" />
-                <br></br>
-                Type your enquiry below:
-                <textarea name="enquiry" rows="4" cols="20"/>
-                <br></br>
-                <input type="submit" value="Submit"/>
-            </form>
+        <form className="contact-form" onSubmit={sendEmail}>
+            <h2>Enquiry Form</h2>
+            <label>Name:</label>
+            <input type="text" name="from_name" />
+            <br/>
+            <label>Email:</label>
+            <br/>
+            <input type="email" name="from_email" />
+            <br/>
+            <label>Subject:</label>
+            <input type="text" name="subject" />
+            <br/>
+            <label>Message:</label>
+            <textarea name="message" />
+            <br/>
+            <input type="submit" value="Send" />
+        </form>
         </div>
     );
 };
 
-export default EnquiryForm;

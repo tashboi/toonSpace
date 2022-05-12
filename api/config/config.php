@@ -1,6 +1,6 @@
 <?php
 
-define('BASEPATH', '/Y3/toonSpace');
+define('BASEPATH', '/Y3/toonSpace/backend');
 define('USER_DATABASE', 'db/user.sqlite');
 define('EVENTS_DATABASE', 'db/event.sqlite');
 define('DEVELOPMENT_MODE', true);

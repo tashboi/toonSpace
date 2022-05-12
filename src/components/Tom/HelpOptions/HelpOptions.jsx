@@ -1,20 +1,21 @@
 import React from "react";
-
 import "./HelpOptions.css";
 
 const HelpOptions = (props) => {
+
+    // Provides the
     const options = [
         {
-            text: "Incoming Study Abroad",
+            text: "Incoming Student",
             handler: props.actionProvider.handleIncomingList,
             id: 1,
         },
         {
-            text: "Outgoing Study Abroad",
+            text: "Outgoing Student",
             handler: props.actionProvider.handleOutgoingList,
             id: 2 },
         {
-            text: "Application Help",
+            text: "Help with applying",
             handler: props.actionProvider.handleApplicationList,
             id: 3 },
         {
@@ -26,7 +27,7 @@ const HelpOptions = (props) => {
             handler: props.actionProvider.handle121booking,
             id: 5},
         {
-            text: "Events happening for students around the world",
+            text: "Events for students",
             handler: props.actionProvider.handleShowAllEvents,
             id: 6 },
     ];
@@ -40,7 +41,6 @@ const HelpOptions = (props) => {
             {option.text}
         </button>
     ));
-
     return <div className="help-options-container">{optionsMarkup}</div>;
 };
 
