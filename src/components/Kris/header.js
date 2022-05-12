@@ -26,6 +26,7 @@ class header extends React.Component {
         <Link id="navLink" to="events">Events</Link>
         <Link id="navLink" to="register">register</Link>
         <Link id="navLink" to="thread">threads</Link>
+        <Link id="navLink" to="eventsfeed">events feed</Link>
 
     </nav>
     <input id="headerSBar" type="text" placeholder="Search..."/>

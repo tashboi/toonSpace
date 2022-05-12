@@ -10,6 +10,7 @@ import Header from "./components/Kris/header";
 import Footer from "./components/Kris/footer";
 import Registration from "./components/Daniel/registration";
 import ThreadPage from "./components/Daniel/threadPage";
+import Eventsfeed from "./components/Mahdi/Eventsfeed";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="register" element={<Registration/>}/>
             <Route path="thread" element={<ThreadPage/>}/>
             <Route path="*" element={<ErrorPage />} />
+            <Route path="eventsfeed" element={<Eventsfeed/>}/>
         </Routes>
         <div id="ChatbotPosition" >
             {

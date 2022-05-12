@@ -14,7 +14,7 @@ class Events extends React.Component {
 
     componentDidMount() {
 
-        let url = "http://unn-w18011022.newnumyspace.co.uk/Y3/toonSpace/api/events"
+        let url = "http://unn-w18011022.newnumyspace.co.uk/Y3/toonSpace/backend/api/events"
 
         if (this.props.filter === "upcoming") {
             url += "?upcoming=true"
