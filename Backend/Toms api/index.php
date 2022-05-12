@@ -18,17 +18,10 @@ switch ($request->getPath()) {
         case 'api':
             $controller = new ApiBaseController($request, $response);
             break;
-
         case 'api/events':
             $controller = new ApiEventsController($request, $response);
             break;
-        case 'api/authenticate':
-            $controller = new ApiAuthenticateController($request, $response);
-            break;
-        case 'api/register':
-            $controller = new ApiRegisterController($request, $response);
-            break;
-            
+
             
         
     default:
