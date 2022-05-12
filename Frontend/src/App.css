@@ -1,5 +1,8 @@
 .App {
 }
+#Spacing{
+  height: 1000px;
+}
 
 #ChatbotPosition{
   position:sticky;
@@ -14,6 +17,9 @@ p{
 
 }
 
+body{
+  min-height: 850px;
+}
 
 .App-header {
   background-color: #282c34;

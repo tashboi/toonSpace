@@ -33,7 +33,7 @@ const config = {
     initialMessages: [
         createChatBotMessage(`Hi, I'm ${BotName}! Below are some of the topics i can help with.`, {
             widget: "HelpOptions",
-        }),createChatBotMessage(`You can either type a question or click the options above if they might answer your query.`,{
+        }),createChatBotMessage(`You can either type a question or click the options above if they might answer your query. I can pass your enquiries on too! Just let me know you want to send an enquiry.`,{
                 delay: 3000,
             }
         )

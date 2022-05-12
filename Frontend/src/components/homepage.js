@@ -1,5 +1,5 @@
 import React from "react";
-import Events from "./Kris/events";
+import Events from "./Kristian/events";
 
 
 class HomePage extends React.Component {
